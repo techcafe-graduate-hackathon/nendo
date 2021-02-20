@@ -1,5 +1,6 @@
 import "./IdeaCard.css";
 import React, { Component } from "react";
+import GoodIcon from "./image/good_icon.png"
 class IdeaCard extends React.Component {
     constructor(props) {
         super(props);
@@ -14,6 +15,7 @@ class IdeaCard extends React.Component {
                     <p className="tag_frame">#運動</p>
                     <p className="tag_frame">#アプリ</p>
                 </div>
+                <img className="good_icon" src={GoodIcon} alt=""/>
             </div>
         );
     }
