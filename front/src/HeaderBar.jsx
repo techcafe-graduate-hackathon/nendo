@@ -1,6 +1,6 @@
 import "./HeaderBar.css";
 import React, { Component } from "react";
-import HeadImage from "./image/header_image.png"
+import HeadImage from "./image/header_image.png";
 class HeaderBar extends React.Component {
     constructor(props) {
         super(props);

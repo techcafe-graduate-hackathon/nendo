@@ -1,7 +1,7 @@
 
 import "./IdeaIndex.css";
 import React, { Component } from "react";
-import IdeaCard from "./IdeaCard"
+import IdeaCard from "./IdeaCard";
 class IdeaIndex extends React.Component {
     constructor(props) {
         super(props);
