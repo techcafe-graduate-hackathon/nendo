@@ -42,6 +42,23 @@ class IdeaIndex extends React.Component {
                 return "card_frame card_color_music";
         }
     }
+
+	card_view(detail){
+		if(detail.id % 2 === 0 ){
+			return(
+				<div className="tile_row left">
+					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)}/>
+				</div>
+			);
+		}
+		else{
+			return(
+				<div className="tile_row right">
+					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)}/>
+				</div>
+			);
+		}
+	}
     render() {
         return (
             <div className="index_frame">
@@ -49,10 +66,7 @@ class IdeaIndex extends React.Component {
                     {
                         this.state.Data_Array.map((detail) => {
                         return (
-                            <div className="tile_row">
-                                <IdeaCard title={detail.title} color_class={this.getColorClass(detail.category.name)}/>
-                                <IdeaCard title={detail.title} color_class={this.getColorClass(detail.category.name)}/>
-                            </div>
+                            this.card_view(detail)
                             );
                         })
                     }
