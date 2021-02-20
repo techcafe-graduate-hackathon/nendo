@@ -7,32 +7,3 @@
     align-items: center;
     flex-direction: column;
 }
-.logo_bar{
-    height: auto;
-    width: 95vw;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    font-size: 90px;
-    color: #FFFFFF;
-
-}
-.tile_fram{
-    width: 95vw;
-    height: 80vh;
-    background-color:lightskyblue;
-    overflow: scroll;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
-.tile_row{
-    width: 100%;
-    height: auto;
-    background-color:rgba(145, 250, 135, 0.644);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}

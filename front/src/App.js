@@ -9,19 +9,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="bg_fram">
-                <div className="logo_bar">
-                    nendo
-                </div>
-                <div className="tile_fram">
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                </div>
+                
             </div>
         );
     }
