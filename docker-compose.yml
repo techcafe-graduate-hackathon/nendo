@@ -32,7 +32,7 @@ services:
       - RAILS_ENV=development
       - MYAPP_DATABASE_PASSWORD=password
     ports:
-      - "3000:3000"
+      - 3000:3000
     depends_on:
       - db
 
