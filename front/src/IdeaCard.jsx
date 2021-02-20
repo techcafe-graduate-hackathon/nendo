@@ -7,7 +7,7 @@ class IdeaCard extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="card_frame">
                 <p>aaaa</p>
             </div>
         );
