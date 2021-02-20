@@ -8,7 +8,12 @@ class IdeaCard extends React.Component {
     render() {
         return (
             <div className="card_frame">
-                <p>aaaa</p>
+                <p className="idea_title">タイトル</p>
+                <div className="tag_list">
+                    <p className="tag_frame">#音楽</p>
+                    <p className="tag_frame">#運動</p>
+                    <p className="tag_frame">#アプリ</p>
+                </div>
             </div>
         );
     }

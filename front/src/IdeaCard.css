@@ -1,5 +1,38 @@
 .card_frame{
-    width: 100px;
-    height: 50px;
-    background-color: rgb(135, 250, 141);
+    min-width: 200px;
+    width: 30%;
+    min-height: 100px;
+    height: auto;
+    background-color: #FF19E880;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.idea_title{
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 5px 0 5px 0;
+}
+.tag_list{
+    width: 100%;
+    margin: 0 7px 0 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.tag_frame{
+    background-color: #FFFFFF4D;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    margin: 2px 5px 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
