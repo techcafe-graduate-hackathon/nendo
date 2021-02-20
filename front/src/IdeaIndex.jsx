@@ -7,23 +7,18 @@ class IdeaIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-			category_id:0,
-			belong_to: "",
-			competitor: "",
-			function: "",
-			name: "",
-			possible: "",
-			purpose: "",
-			target: "",
+			Data_Array:[]
 		};
 	}
-
 	componentDidMount() {
         axios
             // session利用のため withCredentials: true を指定
             .get("http://localhost:8000/ideas")
             .then((results) => {
-                console.log(results.data);
+                console.log(results.data[0].contents);
+                this.setState({
+                    Data_Array: results.data[0].contents,
+                  });
             })
             .catch((data) => {
                 console.log(data);
@@ -34,70 +29,16 @@ class IdeaIndex extends React.Component {
         return (
             <div className="index_frame">
                 <div className="tile_fram">
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
-                    <div className="tile_row">
-                        <IdeaCard />
-                        <IdeaCard />
-                    </div>
+                    {
+                        this.state.Data_Array.map((detail) => {
+                        return (
+                            <div className="tile_row">
+                                <IdeaCard title={detail.title}/>
+                                <IdeaCard title={detail.title}/>
+                            </div>
+                            );
+                        })
+                    }
                 </div>
             </div>
         );
