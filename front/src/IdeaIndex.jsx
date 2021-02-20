@@ -7,7 +7,14 @@ class IdeaIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+			category_id:0,
+			belong_to: "",
+			competitor: "",
+			function: "",
+			name: "",
+			possible: "",
+			purpose: "",
+			target: "",
 		};
 	}
 
