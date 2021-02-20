@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :idea_details
   resources :ideas
   get 'example/test'
   mount_devise_token_auth_for 'User', at: 'auth'
