@@ -1,7 +1,7 @@
 import "./HeaderBar.css";
 import React, { Component } from "react";
 import HeadImage from "./image/header_image.png"
-class IdeaCard extends React.Component {
+class HeaderBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -16,4 +16,4 @@ class IdeaCard extends React.Component {
     }
 }
 
-export default IdeaCard;
+export default HeaderBar;

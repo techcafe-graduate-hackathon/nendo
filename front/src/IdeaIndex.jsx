@@ -2,7 +2,7 @@
 import "./IdeaIndex.css";
 import React, { Component } from "react";
 import IdeaCard from "./IdeaCard"
-class App extends React.Component {
+class IdeaIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -94,4 +94,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default IdeaIndex;
