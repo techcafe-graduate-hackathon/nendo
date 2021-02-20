@@ -1,3 +1,3 @@
 class IdeaDetail < ApplicationRecord
-	belongs_to :idea
+	belongs_to :idea , optional: true
 end
