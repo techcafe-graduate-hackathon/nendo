@@ -14,7 +14,7 @@ class IdeaIndex extends React.Component {
 	componentDidMount() {
         axios
             // session利用のため withCredentials: true を指定
-            .get("localhost:8000" + "/ideas")
+            .get("http://localhost:8000/ideas")
             .then((results) => {
                 console.log(results.data);
             })
