@@ -1,19 +1,18 @@
+.content_frame{
+    position: relative;
+}
 .card_frame{
     cursor: pointer;
-    min-width: 200px;
+    min-width: 400px;
     width: 30%;
     min-height: 90px;
     height: auto;
-    background-color: #FF19E880;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    position: relative;
-}
-.card_frame:hover{
-    background-color: #FF19E8B0;
+    filter: drop-shadow(0px 0px 5px #494a6b);
 }
 .idea_title{
     width: 95%;
@@ -45,13 +44,56 @@
     align-items: center;
 }
 .good_icon{
+    cursor: pointer;
     width: 40px;
     height: 40px;
     padding: 15px;
     background-color: #FFFFFF4D;
+    border: none;
     border-radius: 20px;
     position: absolute;
     z-index: 100;
     right: -20px;
     bottom: -20px;
+}
+.good_icon:hover{
+    border: solid #ffffff 2px;
+}
+
+/* ideaカードのカラー対応CSS */
+.card_color_music{
+    background-color: #FF19E880;
+}
+.card_color_music:hover{
+    background-color: #FF19E8B0;
+}
+.card_color_life{
+    background-color: #5CFC3C80;
+}
+.card_color_life:hover{
+    background-color: #5CFC3CB0;
+}
+.card_color_creature{
+    background-color: #9C59C880;
+}
+.card_color_creature:hover{
+    background-color: #9C59C8B0;
+}
+.card_color_education{
+    background-color: #FBD40C80;
+}
+.card_color_education:hover{
+    background-color: #FBD40CB0;
+}
+.card_color_game{
+    background-color: #0F37EE80;
+}
+.card_color_game:hover{
+    background-color: #0F37EEB0;
+}
+.card_color_food{
+    background-color: #D5201880;
+}
+.card_color_food:hover{
+    background-color: #D52018B0;
 }

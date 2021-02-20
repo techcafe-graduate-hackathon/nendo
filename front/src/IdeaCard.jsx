@@ -8,12 +8,14 @@ class IdeaCard extends React.Component {
     }
     render() {
         return (
-            <div className="card_frame">
-                <p className="idea_title">タイトル</p>
-                <div className="tag_list">
-                    <p className="tag_frame">#音楽</p>
-                    <p className="tag_frame">#運動</p>
-                    <p className="tag_frame">#アプリ</p>
+            <div className="content_frame">
+                <div className="card_frame card_color_music">
+                    <p className="idea_title">タイトル</p>
+                    <div className="tag_list">
+                        <p className="tag_frame">#音楽</p>
+                        <p className="tag_frame">#運動</p>
+                        <p className="tag_frame">#アプリ</p>
+                    </div>
                 </div>
                 <img className="good_icon" src={GoodIcon} alt=""/>
             </div>
