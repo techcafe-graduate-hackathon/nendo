@@ -24,7 +24,24 @@ class IdeaIndex extends React.Component {
                 console.log(data);
             });
 	}
-
+    getColorClass(category){
+        switch(category){
+            case "暮らし":
+                return "card_frame card_color_life";
+            case "生き物":
+                return "card_frame card_color_creature";
+            case "教育":
+                return "card_frame card_color_education";
+            case "音楽":
+                return "card_frame card_color_music";
+            case "ゲーム":
+                return "card_frame card_color_game";
+            case "食べ物":
+                return "card_frame card_color_food";
+            default:
+                return "card_frame card_color_music";
+        }
+    }
     render() {
         return (
             <div className="index_frame">
@@ -33,8 +50,8 @@ class IdeaIndex extends React.Component {
                         this.state.Data_Array.map((detail) => {
                         return (
                             <div className="tile_row">
-                                <IdeaCard title={detail.title}/>
-                                <IdeaCard title={detail.title}/>
+                                <IdeaCard title={detail.title} color_class={this.getColorClass(detail.category.name)}/>
+                                <IdeaCard title={detail.title} color_class={this.getColorClass(detail.category.name)}/>
                             </div>
                             );
                         })

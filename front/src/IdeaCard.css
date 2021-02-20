@@ -18,7 +18,7 @@
     width: 95%;
     color: #ffffff;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 15px;
     margin: 5px 0 5px 0;
     display: flex;
     justify-content: flex-start;
@@ -48,7 +48,6 @@
     width: 40px;
     height: 40px;
     padding: 15px;
-    background-color: #FFFFFF4D;
     border: none;
     border-radius: 20px;
     position: absolute;
@@ -59,7 +58,12 @@
 .good_icon:hover{
     border: solid #ffffff 2px;
 }
-
+.good_icon_color{
+    background-color: #FFFFFF4D;
+}
+.good_icon_ispushed{
+    background-color: #ff58e3;
+}
 /* ideaカードのカラー対応CSS */
 .card_color_music{
     background-color: #FF19E880;
