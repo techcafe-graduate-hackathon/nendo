@@ -5,9 +5,6 @@ ENV APP_ROOT /app_name
 WORKDIR $APP_ROOT
 
 RUN yarn install
-RUN yarn add create-react-app
-RUN yarn add react-scripts
-RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | ash
 RUN yarn upgrade
 
 ADD . $APP_ROOT
