@@ -41,3 +41,14 @@ Category.create!(
 	  }
 	]
   )
+
+  Idea.create!(
+	[
+	  {
+		title:'アイディアを形できるマッチングアプリを作りませんか？',
+		user_id:1,
+		idea_detail_id:1
+		category_id:3
+	  }
+	]
+  )
