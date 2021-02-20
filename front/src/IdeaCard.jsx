@@ -1,5 +1,5 @@
 import "./IdeaCard.css";
-import React, { Component } from "react";
+import React from "react";
 import GoodIcon from "./image/good_icon.png"
 class IdeaCard extends React.Component {
     constructor(props) {

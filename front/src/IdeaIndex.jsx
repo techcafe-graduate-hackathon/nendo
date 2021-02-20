@@ -1,6 +1,6 @@
 
 import "./IdeaIndex.css";
-import React, { Component } from "react";
+import React from "react";
 import IdeaCard from "./IdeaCard";
 import axios from "axios";
 class IdeaIndex extends React.Component {
