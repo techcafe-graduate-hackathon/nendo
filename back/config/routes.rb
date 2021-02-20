@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  scope :json do
+    get '/' => 'joins#join'
+    delete '/' => 'joins#withdraw'
+  end
   resources :idea_details
   resources :ideas
   get 'example/test'
