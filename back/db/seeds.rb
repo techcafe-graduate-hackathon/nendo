@@ -27,3 +27,17 @@ Category.create!(
 	  },
 	]
   )
+
+  IdeaDetail.create!(
+	[
+	  {
+		purpose:'アイディアを形に',
+		target:'アイディア発案者',
+		name:'nendo',
+		belong_to:'マッチングサービス',
+		possible:'アイディア発案者とエンジニアのマッチング',
+		competitor:'bosyu',
+		function:'公開されていない面白いアイディアに出会える環境'
+	  }
+	]
+  )
