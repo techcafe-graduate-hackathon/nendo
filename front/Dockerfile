@@ -5,7 +5,10 @@ ENV APP_ROOT /app_name
 WORKDIR $APP_ROOT
 
 RUN npm install -g create-react-app
-RUN npm install
+RUN npm install &&\
+    yarn install --check-files && \
+    curl --compressed -o- -L https://yarnpkg.com/install.sh | ash && \
+    yarn upgrade && \
 
 ADD . $APP_ROOT
 

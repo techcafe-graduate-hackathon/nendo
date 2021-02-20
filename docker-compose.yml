@@ -1,9 +1,21 @@
 version: '3'
 
 services:
+  db:
+    image: postgres:12.0-alpine
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - TZ=Asia/Tokyo
+      - POSTGRES_DB=test_db
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "3306:3306"
+
   front:
     build: ./front
-    command: yarn start
+    command: "./node_modules/react-scripts/bin/react-scripts.js start"
     volumes:
       - ./front:/app_name
     ports:
@@ -12,7 +24,7 @@ services:
 
   back:
     build: ./back
-    command: ash -c "rm -f tmp/pids/server.pid && bundle exec rails s puma -p 3000 -b '0.0.0.0'"
+    command: ash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - ./back:/myapp
     environment:
