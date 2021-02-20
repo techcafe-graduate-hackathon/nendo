@@ -25,6 +25,22 @@ class IdeaIndex extends React.Component {
             });
 	}
 
+	card_view(detail){
+		if(detail.id % 2 === 0 ){
+			return(
+				<div className="tile_row left">
+					<IdeaCard title={detail.title} place="right"/>
+				</div>
+			);
+		}
+		else{
+			return(
+				<div className="tile_row right">
+					<IdeaCard title={detail.title} place="right"/>
+				</div>
+			);
+		}
+	}
     render() {
         return (
             <div className="index_frame">
@@ -32,10 +48,7 @@ class IdeaIndex extends React.Component {
                     {
                         this.state.Data_Array.map((detail) => {
                         return (
-                            <div className="tile_row">
-                                <IdeaCard title={detail.title}/>
-                                <IdeaCard title={detail.title}/>
-                            </div>
+                            this.card_view(detail)
                             );
                         })
                     }

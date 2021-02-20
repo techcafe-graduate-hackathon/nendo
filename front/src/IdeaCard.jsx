@@ -8,7 +8,7 @@ class IdeaCard extends React.Component {
     }
     render() {
         return (
-            <div className="content_frame">
+            <div className={this.props.place + " content_frame"}>
                 <div className="card_frame card_color_music">
                     <p className="idea_title">{this.props.title}</p>
                     <div className="tag_list">
