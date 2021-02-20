@@ -1,5 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
+import IdeaIndex from "./IdeaIndex"
+import HeaderBar from "./HeaderBar"
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -7,8 +9,9 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div>
-                <p>aaaa</p>
+            <div className="bg_frame">
+                <HeaderBar />
+                <IdeaIndex />
             </div>
         );
     }
