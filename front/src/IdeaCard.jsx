@@ -1,17 +1,17 @@
-import "./App.css";
+import "./IdeaCard.css";
 import React, { Component } from "react";
-class App extends React.Component {
+class IdeaCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
     render() {
         return (
-            <div className="aa">
+            <div>
                 <p>aaaa</p>
             </div>
         );
     }
 }
 
-export default App;
+export default IdeaCard;
