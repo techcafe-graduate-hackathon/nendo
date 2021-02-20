@@ -6,7 +6,20 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-    }
+	}
+
+	componentDidMount() {
+        axios
+            // session利用のため withCredentials: true を指定
+            .get("localhost:3000" + "/ideas")
+            .then((results) => {
+                console.log(results.data);
+            })
+            .catch((data) => {
+                console.log(data);
+            });
+	}
+
     render() {
         return (
             <div className="bg_fram">
