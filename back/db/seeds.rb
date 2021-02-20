@@ -27,12 +27,48 @@ Category.create!(
 	  },
 	  {
 		name: '食べ物'
-	  },
+	  }
 	]
   )
 
   IdeaDetail.create!(
 	[
+	  {
+		purpose:'アイディアを形に',
+		target:'アイディア発案者',
+		name:'nendo',
+		belong_to:'マッチングサービス',
+		possible:'アイディア発案者とエンジニアのマッチング',
+		competitor:'bosyu',
+		function:'公開されていない面白いアイディアに出会える環境'
+	  },
+	  {
+		purpose:'アイディアを形に',
+		target:'アイディア発案者',
+		name:'nendo',
+		belong_to:'マッチングサービス',
+		possible:'アイディア発案者とエンジニアのマッチング',
+		competitor:'bosyu',
+		function:'公開されていない面白いアイディアに出会える環境'
+	  },
+	  {
+		purpose:'アイディアを形に',
+		target:'アイディア発案者',
+		name:'nendo',
+		belong_to:'マッチングサービス',
+		possible:'アイディア発案者とエンジニアのマッチング',
+		competitor:'bosyu',
+		function:'公開されていない面白いアイディアに出会える環境'
+	  },
+	  {
+		purpose:'アイディアを形に',
+		target:'アイディア発案者',
+		name:'nendo',
+		belong_to:'マッチングサービス',
+		possible:'アイディア発案者とエンジニアのマッチング',
+		competitor:'bosyu',
+		function:'公開されていない面白いアイディアに出会える環境'
+	  },
 	  {
 		purpose:'アイディアを形に',
 		target:'アイディア発案者',
@@ -49,6 +85,30 @@ Category.create!(
 	[
 	  {
 		title:'アイディアを形できるマッチングアプリを作りませんか？',
+		user_id:1,
+		idea_detail_id:1,
+		category_id:3
+	  },
+	  {
+		title:'お金が降ってくるあぷり作りませんか？',
+		user_id:1,
+		idea_detail_id:1,
+		category_id:2
+	  },
+	  {
+		title:'なにか作りませんか？',
+		user_id:1,
+		idea_detail_id:1,
+		category_id:3
+	  },
+	  {
+		title:'挨拶できるあぷりつくりたい',
+		user_id:1,
+		idea_detail_id:1,
+		category_id:1
+	  },
+	  {
+		title:'寝る時間を投資しよう',
 		user_id:1,
 		idea_detail_id:1,
 		category_id:3
