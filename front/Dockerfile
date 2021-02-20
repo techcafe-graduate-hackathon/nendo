@@ -4,12 +4,12 @@ RUN mkdir /app_name
 ENV APP_ROOT /app_name 
 WORKDIR $APP_ROOT
 
-RUN npm install -g create-react-app
-RUN npm install &&\
-    yarn install --check-files && \
-    curl --compressed -o- -L https://yarnpkg.com/install.sh | ash && \
-    yarn upgrade && \
+RUN yarn install
+RUN yarn add create-react-app
+RUN yarn add react-scripts
+RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | ash
+RUN yarn upgrade
 
 ADD . $APP_ROOT
 
-CMD ["./node_modules/react-scripts/bin/react-scripts.js", "start"]
+CMD ["yarn", "start"]
