@@ -6,13 +6,15 @@ import axios from "axios";
 class IdeaIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+
+		};
 	}
 
 	componentDidMount() {
         axios
             // session利用のため withCredentials: true を指定
-            .get("localhost:3000" + "/ideas")
+            .get("localhost:8000" + "/ideas")
             .then((results) => {
                 console.log(results.data);
             })
