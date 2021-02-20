@@ -15,11 +15,11 @@ services:
 
   front:
     build: ./front
-    command: "./node_modules/react-scripts/bin/react-scripts.js start"
+    command: "yarn start"
     volumes:
       - ./front:/app_name
     ports:
-      - 8000:3000
+      - 8000:8000
     tty: true
 
   back:
