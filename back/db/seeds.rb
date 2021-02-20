@@ -55,3 +55,23 @@ Category.create!(
 	  }
 	]
   )
+Tag.create!(
+	[
+		{
+			idea_id:1,
+			name:'アイディア'
+		},
+		{
+			idea_id:1,
+			name:'開発'
+		},
+		{
+			idea_id:2,
+			name:'開発しない'
+		},
+		{
+			idea_id:3,
+			name:'お金'
+		}
+	]
+)
