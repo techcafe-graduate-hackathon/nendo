@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(name: "test Tarou", email: "example@sample.com", password: "passward", password_confirmation: "password", is_developer: false)
+
 Category.create!(
 	[
 	  {
@@ -47,7 +50,7 @@ Category.create!(
 	  {
 		title:'アイディアを形できるマッチングアプリを作りませんか？',
 		user_id:1,
-		idea_detail_id:1
+		idea_detail_id:1,
 		category_id:3
 	  }
 	]
