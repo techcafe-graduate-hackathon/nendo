@@ -21,7 +21,7 @@ class IdeaIndex extends React.Component {
                   });
             })
             .catch((data) => {
-                console.log(data);
+                // console.log(data);
             });
 	}
     getColorClass(category){
@@ -44,17 +44,18 @@ class IdeaIndex extends React.Component {
     }
 
 	card_view(detail){
+        // console.log(detail.tags);
 		if(detail.id % 2 === 0 ){
 			return(
 				<div className="tile_row left">
-					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)}/>
+					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)} tags_array={detail.tags}/>
 				</div>
 			);
 		}
 		else{
 			return(
 				<div className="tile_row right">
-					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)}/>
+					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)} tags_array={detail.tags}/>
 				</div>
 			);
 		}

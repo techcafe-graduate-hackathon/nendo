@@ -24,9 +24,13 @@ class IdeaCard extends React.Component {
                 <div className={this.props.color_class}>
                     <p className="idea_title">{this.props.title}</p>
                     <div className="tag_list">
-                        <p className="tag_frame">#音楽</p>
-                        <p className="tag_frame">#運動</p>
-                        <p className="tag_frame">#アプリ</p>
+                        {
+                            this.props.tags_array.map((tag) => {
+                                return (
+                                    <p className="tag_frame">{ '#' + tag.name}</p>
+                                    );
+                                })
+                        }
                     </div>
                 </div>
                 <img className={this.getGoodIconClass(this.state.good_icon_ispushed)} src={GoodIcon} alt="" onClick={()=>this.IsPushedGood()}/>

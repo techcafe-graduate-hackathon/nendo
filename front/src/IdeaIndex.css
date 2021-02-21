@@ -10,11 +10,16 @@
     padding-right: 2vw;
     padding-left: 2vw;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
+        -ms-overflow-style: none;    /* IE, Edge 対応 */
+        scrollbar-width: none;       /* Firefox 対応 */
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+}
+.tile_fram::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
 }
 .tile_row {
     width: 100%;
