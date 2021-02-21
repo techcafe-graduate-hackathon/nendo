@@ -3,11 +3,13 @@ import "./IdeaIndex.css";
 import React from "react";
 import IdeaCard from "./IdeaCard";
 import axios from "axios";
+import DetailsModal from "./DetailsModal"
 class IdeaIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-			Data_Array:[]
+			Data_Array:[],
+			is_modal:false,
 		};
 	}
 	componentDidMount() {
@@ -43,22 +45,34 @@ class IdeaIndex extends React.Component {
         }
     }
 
+
+	toggle_modal(){
+		this.setState({is_modal:!this.state.is_modal});
+		console.log(this.state.is_modal);
+	}
+	
 	card_view(detail){
 		if(detail.id % 2 === 0 ){
 			return(
-				<div className="tile_row left">
-					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)}/>
+				<div className="tile_row left" onClick={()=>this.toggle_modal()}>
+					<IdeaCard title={detail.title} place="right" 
+					color_class={this.getColorClass(detail.category.name)} 
+					 />
 				</div>
 			);
 		}
 		else{
 			return(
-				<div className="tile_row right">
-					<IdeaCard title={detail.title} place="right" color_class={this.getColorClass(detail.category.name)}/>
+				<div className="tile_row right" onClick={()=>this.toggle_modal()}>
+					<IdeaCard title={detail.title} place="right" 
+					color_class={this.getColorClass(detail.category.name)} 
+					/>
 				</div>
 			);
 		}
 	}
+
+
     render() {
         return (
             <div className="index_frame">
@@ -71,6 +85,11 @@ class IdeaIndex extends React.Component {
                         })
                     }
                 </div>
+				{this.state.is_modal ? (
+                    < DetailsModal/>
+                ) : (
+                    ""
+                )}
             </div>
         );
     }
