@@ -1,21 +1,35 @@
 import "./IdeaCard.css";
-import React, { Component } from "react";
+import React from "react";
 import GoodIcon from "./image/good_icon.png"
 class IdeaCard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            good_icon_ispushed:false
+        };
+    }
+    IsPushedGood(){
+        this.setState({good_icon_ispushed:!this.state.good_icon_ispushed});
+    }
+    getGoodIconClass(status){
+        if(status){
+            return "good_icon good_icon_ispushed";
+        }else{
+            return "good_icon good_icon_color";
+        }
     }
     render() {
         return (
-            <div className="card_frame">
-                <p className="idea_title">タイトル</p>
-                <div className="tag_list">
-                    <p className="tag_frame">#音楽</p>
-                    <p className="tag_frame">#運動</p>
-                    <p className="tag_frame">#アプリ</p>
+            <div className={this.props.place + " content_frame"}>
+                <div className={this.props.color_class}>
+                    <p className="idea_title">{this.props.title}</p>
+                    <div className="tag_list">
+                        <p className="tag_frame">#音楽</p>
+                        <p className="tag_frame">#運動</p>
+                        <p className="tag_frame">#アプリ</p>
+                    </div>
                 </div>
-                <img className="good_icon" src={GoodIcon} alt=""/>
+                <img className={this.getGoodIconClass(this.state.good_icon_ispushed)} src={GoodIcon} alt="" onClick={()=>this.IsPushedGood()}/>
             </div>
         );
     }

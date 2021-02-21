@@ -1,7 +1,7 @@
 class IdeasController < ApplicationController
   def index
     @ideas = Idea.all
-    render json: {status: "success", contents: @ideas}
+    render json: [status: "success", contents: @ideas.as_json(include: [:category, :idea_detail, :tags] ) ]
   end
 
   def show

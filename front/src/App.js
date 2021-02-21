@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { Component } from "react";
+import React from "react";
 import IdeaIndex from "./IdeaIndex"
 import HeaderBar from "./HeaderBar"
 class App extends React.Component {

@@ -1,39 +1,38 @@
-.card_frame{
+.content_frame {
+    position: relative;
+}
+.card_frame {
     cursor: pointer;
-    min-width: 200px;
-    width: 30%;
+    width: 40vw;
     min-height: 90px;
-    height: auto;
-    background-color: #FF19E880;
+    min-height: 15vh;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    filter: drop-shadow(0px 0px 5px #494a6b);
 }
-.card_frame:hover{
-    background-color: #FF19E8B0;
-}
-.idea_title{
+
+.idea_title {
     width: 95%;
     color: #ffffff;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 15px;
     margin: 5px 0 5px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.tag_list{
+.tag_list {
     width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.tag_frame{
-    background-color: #FFFFFF4D;
+.tag_frame {
+    background-color: #ffffff4d;
     color: #ffffff;
     font-weight: 500;
     font-size: 15px;
@@ -44,14 +43,62 @@
     justify-content: center;
     align-items: center;
 }
-.good_icon{
+.good_icon {
+    cursor: pointer;
     width: 40px;
     height: 40px;
     padding: 15px;
-    background-color: #FFFFFF4D;
+    background-color: #ffffff4d;
+    border: none;
     border-radius: 20px;
     position: absolute;
     z-index: 100;
-    right: -20px;
-    bottom: -20px;
+    right: -10px;
+    bottom: -10px;
+}
+.good_icon:hover {
+    border: solid #ffffff 2px;
+}
+.good_icon_color{
+    background-color: #FFFFFF4D;
+}
+.good_icon_ispushed{
+    background-color: #ff58e3;
+}
+/* ideaカードのカラー対応CSS */
+.card_color_music {
+    background-color: #ff19e880;
+}
+.card_color_music:hover {
+    background-color: #ff19e8b0;
+}
+.card_color_life {
+    background-color: #5cfc3c80;
+}
+.card_color_life:hover {
+    background-color: #5cfc3cb0;
+}
+.card_color_creature {
+    background-color: #9c59c880;
+}
+.card_color_creature:hover {
+    background-color: #9c59c8b0;
+}
+.card_color_education {
+    background-color: #fbd40c80;
+}
+.card_color_education:hover {
+    background-color: #fbd40cb0;
+}
+.card_color_game {
+    background-color: #0f37ee80;
+}
+.card_color_game:hover {
+    background-color: #0f37eeb0;
+}
+.card_color_food {
+    background-color: #d5201880;
+}
+.card_color_food:hover {
+    background-color: #d52018b0;
 }
