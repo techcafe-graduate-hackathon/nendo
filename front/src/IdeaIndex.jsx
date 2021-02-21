@@ -86,7 +86,7 @@ class IdeaIndex extends React.Component {
                     }
                 </div>
 				{this.state.is_modal ? (
-                    < DetailsModal/>
+                    < DetailsModal func={()=>this.toggle_modal()}/>
                 ) : (
                     ""
                 )}

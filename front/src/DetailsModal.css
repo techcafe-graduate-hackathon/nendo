@@ -68,3 +68,21 @@ img {
     line-height: 1.5;
     font-family: "メイリオ", serif;
 }
+.btn_content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.schedule_btn {
+    height: 2em;
+    width: 40%;
+    border-radius: 1em;
+    box-sizing: border-box;
+}
+button {
+    margin-left: 30%;
+    background-color: #211c36;
+    color: white;
+}

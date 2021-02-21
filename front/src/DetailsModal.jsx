@@ -20,6 +20,12 @@ class DetailsModal extends React.Component {
 					</div>
 					<p class="text">音楽のテンポによってランニング中のユーザの走る速度を提案し、整える音楽再生アプリです。 音楽のテンポによってランニング中のユーザの走る速度を提案し、整える音楽再生アプリです。音楽のテンポによってランニング中のユーザの走る速度を提案し、整える音楽再生アプリです。 音楽のテンポによってランニング中のユーザの走る速度を提案し、整える音楽再生アプリです。音楽のテンポによってランニング中のユーザの走る速度を提案し、整える音楽再生アプリです。</p>
 				</section>
+				<button
+					onClick={this.props.func}
+					class="btn_content schedule_btn"
+				>
+					キャンセル
+				</button>
             </div>
         );
     }
