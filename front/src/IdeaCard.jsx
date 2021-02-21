@@ -5,7 +5,7 @@ class IdeaCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            good_icon_ispushed:false
+			good_icon_ispushed:false
         };
     }
     IsPushedGood(){
@@ -17,7 +17,7 @@ class IdeaCard extends React.Component {
         }else{
             return "good_icon good_icon_color";
         }
-    }
+	}
     render() {
         return (
             <div className={this.props.place + " content_frame"}>
@@ -30,6 +30,7 @@ class IdeaCard extends React.Component {
                     </div>
                 </div>
                 <img className={this.getGoodIconClass(this.state.good_icon_ispushed)} src={GoodIcon} alt="" onClick={()=>this.IsPushedGood()}/>
+				
             </div>
         );
     }
