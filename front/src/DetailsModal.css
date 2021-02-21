@@ -2,7 +2,69 @@
     width: 90vw;
     height: 80vh;
     position: absolute;
-    background-color: rgba(250, 235, 215, 0.445);
+    /* background-color: rgba(250, 235, 215, 0.445); */
     z-index: 100;
     display: inline-block;
+    border: 1px solid #fff;
+    background-color: #211c36;
+}
+
+body {
+    background-color: #211c36;
+}
+
+.module-container {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 24px;
+}
+
+.content {
+    margin: 50px 173px auto 174px;
+}
+
+.ideaTitle {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 32px;
+    color: #fff;
+    background-color: #ff19e880;
+    border-radius: 10px;
+    text-indent: 0.3in;
+}
+
+img {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 9vh;
+    right: 14vw;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff70;
+}
+
+.tagcontainer {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    margin: 10px 5px 35px 5px;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    background-color: #ffffff70;
+    border-radius: 10px;
+}
+
+.text {
+    margin-top: 40px;
+    color: #fff;
+    line-height: 1.5;
+    font-family: "メイリオ", serif;
 }
